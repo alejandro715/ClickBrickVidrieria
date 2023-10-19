@@ -4,14 +4,151 @@
     "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\ClickBrickVidrieria.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\ClickBrickVidrieria.csproj": {
+    "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.AccesoDatos\\ClickBrickVidrieria.AccesoDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\ClickBrickVidrieria.csproj",
-        "projectName": "ClickBrickVidrieria",
-        "projectPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\ClickBrickVidrieria.csproj",
+        "projectUniqueName": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.AccesoDatos\\ClickBrickVidrieria.AccesoDatos.csproj",
+        "projectName": "ClickBrickVidrieria.AccesoDatos",
+        "projectPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.AccesoDatos\\ClickBrickVidrieria.AccesoDatos.csproj",
         "packagesPath": "C:\\Users\\Alejandro Bautista\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\obj\\",
+        "outputPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.AccesoDatos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alejandro Bautista\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Modelos\\ClickBrickVidrieria.Modelos.csproj": {
+                "projectPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Modelos\\ClickBrickVidrieria.Modelos.csproj"
+              },
+              "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Utilidades\\ClickBrickVidrieria.Utilidades.csproj": {
+                "projectPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Utilidades\\ClickBrickVidrieria.Utilidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.318\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Modelos\\ClickBrickVidrieria.Modelos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Modelos\\ClickBrickVidrieria.Modelos.csproj",
+        "projectName": "ClickBrickVidrieria.Modelos",
+        "projectPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Modelos\\ClickBrickVidrieria.Modelos.csproj",
+        "packagesPath": "C:\\Users\\Alejandro Bautista\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Modelos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alejandro Bautista\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Utilidades\\ClickBrickVidrieria.Utilidades.csproj": {
+                "projectPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Utilidades\\ClickBrickVidrieria.Utilidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.318\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Utilidades\\ClickBrickVidrieria.Utilidades.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Utilidades\\ClickBrickVidrieria.Utilidades.csproj",
+        "projectName": "ClickBrickVidrieria.Utilidades",
+        "projectPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Utilidades\\ClickBrickVidrieria.Utilidades.csproj",
+        "packagesPath": "C:\\Users\\Alejandro Bautista\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Utilidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alejandro Bautista\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +176,70 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.318\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\ClickBrickVidrieria.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\ClickBrickVidrieria.csproj",
+        "projectName": "ClickBrickVidrieria",
+        "projectPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\ClickBrickVidrieria.csproj",
+        "packagesPath": "C:\\Users\\Alejandro Bautista\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alejandro Bautista\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.AccesoDatos\\ClickBrickVidrieria.AccesoDatos.csproj": {
+                "projectPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.AccesoDatos\\ClickBrickVidrieria.AccesoDatos.csproj"
+              },
+              "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Modelos\\ClickBrickVidrieria.Modelos.csproj": {
+                "projectPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Modelos\\ClickBrickVidrieria.Modelos.csproj"
+              },
+              "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Utilidades\\ClickBrickVidrieria.Utilidades.csproj": {
+                "projectPath": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria.Utilidades\\ClickBrickVidrieria.Utilidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
@@ -52,6 +253,10 @@
               "target": "Package",
               "version": "[6.0.23, )"
             },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.23, )"
@@ -59,6 +264,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[6.0.23, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             }
           },
           "imports": [
