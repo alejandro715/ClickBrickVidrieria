@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClickBrickVidrieria", "ClickBrickVidrieria\ClickBrickVidrieria.csproj", "{728A20EA-DE07-4154-8E22-F155D854A079}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{728A20EA-DE07-4154-8E22-F155D854A079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728A20EA-DE07-4154-8E22-F155D854A079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728A20EA-DE07-4154-8E22-F155D854A079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728A20EA-DE07-4154-8E22-F155D854A079}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CC6ABB4-BE6B-46E9-81B8-EC9C9D5DC15C}
+	EndGlobalSection
+EndGlobal
