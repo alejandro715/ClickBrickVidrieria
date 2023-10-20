@@ -10,7 +10,7 @@ namespace ClickBrickVidrieria.AccesoDatos.Repositorio.iRepositorio
     public interface iRepositorio <T> where T : class
     {
 
-        Task<T> Obtener(int id);
+        Task<T> Obtener(int idBodega);
 
         Task<IEnumerable<T>> ObtenerTodos(
             
