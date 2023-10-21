@@ -14,12 +14,14 @@ namespace ClickBrickVidrieria.AccesoDatos.Repositorio
         private readonly ApplicationDbContext _db;
         public iBodegaRepositorio Bodega { get; private set; }
         public iCategoriaRepositorio Categoria { get; private set; }
+        public iMarcaRepositorio Marca { get; private set; }
 
         public UnidadTrabajo(ApplicationDbContext db)
         {
             _db = db;
             Bodega = new BodegaRepositorio(_db);
             Categoria = new CategoriaRepositorio(_db);
+            Marca = new MarcaRepositorio(_db);
         }
 
         public void Dispose()

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "exIu0JDhQs83vSNe+gQxoEghpTRYZvWYYv6DBb7PaDg=",
+  "Hash": "/49CWf4cjSL8qH8VHU3qMNQmzwdD5Ux5vbh+2GylxgU=",
   "Source": "ClickBrickVidrieria",
   "BasePath": "_content/ClickBrickVidrieria",
   "Mode": "Default",
@@ -1137,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Categoria.js"
+    },
+    {
+      "Identity": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\js\\Marca.js",
+      "SourceId": "ClickBrickVidrieria",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\",
+      "BasePath": "_content/ClickBrickVidrieria",
+      "RelativePath": "js/Marca.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Marca.js"
     },
     {
       "Identity": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\js\\site.js",

@@ -7,12 +7,12 @@ namespace ClickBrickVidrieria.Areas.Admin.Controllers
 {
     [Area("Admin")]
 
-    public class MarcaController : Controller
+    public class CategoriaController : Controller
     {
 
         private readonly iUnidadTrabajo _unidadTrabajo;
 
-        public MarcaController(iUnidadTrabajo unidadTrabajo)
+        public CategoriaController(iUnidadTrabajo unidadTrabajo)
         {
             _unidadTrabajo = unidadTrabajo;
         }
@@ -27,47 +27,47 @@ namespace ClickBrickVidrieria.Areas.Admin.Controllers
 
         {
 
-            Marca marca = new Marca();
+            Categoria categoria = new Categoria();
 
             if(id == null)
             {
-                //crea una nueva Marca
-                marca.Estado = true;
-                return View(marca);
+                //crea una nueva categoria
+                categoria.Estado = true;
+                return View(categoria);
             }
-            //actualización de la marca
-            marca = await _unidadTrabajo.Marca.Obtener(id.GetValueOrDefault());
-            if(marca == null)
+            //actualización de la categoria
+            categoria = await _unidadTrabajo.Categoria.Obtener(id.GetValueOrDefault());
+            if(categoria == null)
             {
                 return NotFound();
             }
-            return View(marca);
+            return View(categoria);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Upsert(Marca marca)
+        public async Task<ActionResult> Upsert(Categoria categoria)
 
         {
             if(ModelState.IsValid)
 
             {
-                if(marca.Id == 0)
+                if(categoria.Id == 0)
                 {
-                    await _unidadTrabajo.Marca.Agregar(marca);
-                    TempData[DS.Exitosa] = "Marca creada con exito";
+                    await _unidadTrabajo.Categoria.Agregar(categoria);
+                    TempData[DS.Exitosa] = "Categoria creada con exito";
                 }
                 else
                 {
-                    _unidadTrabajo.Marca.Actualizar(marca);
-                    TempData[DS.Exitosa] = "Marca actualizada con exito";
+                    _unidadTrabajo.Categoria.Actualizar(categoria);
+                    TempData[DS.Exitosa] = "Categoria actualizada con exito";
                 }
 
                 await _unidadTrabajo.Guardar();
                 return RedirectToAction(nameof(Index));
             }
-            TempData[DS.Error] = "Error al grabar la Marca";
-            return View(marca);
+            TempData[DS.Error] = "Error al grabar la Categoria";
+            return View(categoria);
         }
 
         #region API
@@ -76,7 +76,7 @@ namespace ClickBrickVidrieria.Areas.Admin.Controllers
         public async Task<IActionResult> ObtenerTodos()
         {
 
-            var todos = await _unidadTrabajo.Marca.ObtenerTodos();
+            var todos = await _unidadTrabajo.Categoria.ObtenerTodos();
             return Json(new { data = todos });
 
         }
@@ -85,22 +85,22 @@ namespace ClickBrickVidrieria.Areas.Admin.Controllers
         public async Task <IActionResult> Delete(int id)
         {
 
-            var marcaBd = await _unidadTrabajo.Marca.Obtener(id);
-        if(marcaBd == null)
+            var categoriaBd = await _unidadTrabajo.Categoria.Obtener(id);
+        if(categoriaBd == null)
 
             {
-                return Json(new { success = false, message = "Error al borrar Marca" });
+                return Json(new { success = false, message = "Error al borrar Categoria" });
             }
-            _unidadTrabajo.Marca.Remover(marcaBd);
+            _unidadTrabajo.Categoria.Remover(categoriaBd);
             await _unidadTrabajo.Guardar();
-            return Json(new { success = true, message = "Marca borrada con Exito" });
+            return Json(new { success = true, message = "Categoria borrada con Exito" });
         }
 
         [ActionName("ValidarNombre")]
         public async Task<IActionResult> ValidarNombre(String nombre, int id =0)
         {
             bool valor = false;
-            var lista = await _unidadTrabajo.Marca.ObtenerTodos();
+            var lista = await _unidadTrabajo.Categoria.ObtenerTodos();
             if(id== 0)
             {
                 valor = lista.Any(b=>b.Nombre.ToLower().Trim() == nombre.ToLower().Trim());
