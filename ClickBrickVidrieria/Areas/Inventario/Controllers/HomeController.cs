@@ -1,4 +1,6 @@
-﻿using ClickBrickVidrieria.Modelos.ViewModels;
+﻿using ClickBrickVidrieria.AccesoDatos.Repositorio.iRepositorio;
+using ClickBrickVidrieria.Modelos;
+using ClickBrickVidrieria.Modelos.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -9,15 +11,18 @@ namespace ClickBrickVidrieria.Areas.Inventario.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly iUnidadTrabajo _UnidadTrabajo;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, iUnidadTrabajo unidadTrabajo)
         {
             _logger = logger;
+            _UnidadTrabajo = unidadTrabajo;
         }
 
-        public IActionResult Index()
+        public async Task <IActionResult> Index()
         {
-            return View();
+            IEnumerable<Producto> productoLista = await _UnidadTrabajo.Producto.ObtenerTodos();
+            return View(productoLista);
         }
 
         public IActionResult Privacy()

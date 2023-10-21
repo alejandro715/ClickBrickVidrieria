@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z7s3mX2eydPWyneJZ/FCwY+MvdcZRy6lmmy/LbOoNL4=",
+  "Hash": "jd9Yv0EO141oo7skiFYB6cRux2I9VyOUfc9o4sBqRJM=",
   "Source": "ClickBrickVidrieria",
   "BasePath": "_content/ClickBrickVidrieria",
   "Mode": "Default",
@@ -1103,6 +1103,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\Imagenes\\ICONO.ico",
+      "SourceId": "ClickBrickVidrieria",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\",
+      "BasePath": "_content/ClickBrickVidrieria",
+      "RelativePath": "Imagenes/ICONO.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagenes\\ICONO.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\Imagenes\\ICONO.png",
+      "SourceId": "ClickBrickVidrieria",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\",
+      "BasePath": "_content/ClickBrickVidrieria",
+      "RelativePath": "Imagenes/ICONO.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagenes\\ICONO.png"
     },
     {
       "Identity": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\Imagenes\\producto\\fe89eb06-8a25-40d4-91d8-9ed819cbfa32.jpg",
