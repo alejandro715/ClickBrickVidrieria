@@ -28,9 +28,9 @@ namespace ClickBrickVidrieria.AccesoDatos.Repositorio
             await dbset.AddAsync(entidad); //insertar en tabla
         }
 
-        public async Task<T> Obtener(int id)
+        public async Task<T> Obtener(int Id)
         {
-            return await dbset.FindAsync(id);
+            return await dbset.FindAsync(Id);
         }
 
         public async Task<IEnumerable<T>> ObtenerTodos(Expression<Func<T, bool>> filtro = null, 
