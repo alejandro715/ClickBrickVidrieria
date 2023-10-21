@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-ClickBrickVidrieria-5181AC26-D1D4-4263-8E3E-284FB70D5AE6</UserSecretsId>
   </PropertyGroup>
@@ -21,6 +20,10 @@
     <ProjectReference Include="..\ClickBrickVidrieria.AccesoDatos\ClickBrickVidrieria.AccesoDatos.csproj" />
     <ProjectReference Include="..\ClickBrickVidrieria.Modelos\ClickBrickVidrieria.Modelos.csproj" />
     <ProjectReference Include="..\ClickBrickVidrieria.Utilidades\ClickBrickVidrieria.Utilidades.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Imagenes\producto\" />
   </ItemGroup>
 
 </Project>

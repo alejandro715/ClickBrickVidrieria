@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/49CWf4cjSL8qH8VHU3qMNQmzwdD5Ux5vbh+2GylxgU=",
+  "Hash": "z7s3mX2eydPWyneJZ/FCwY+MvdcZRy6lmmy/LbOoNL4=",
   "Source": "ClickBrickVidrieria",
   "BasePath": "_content/ClickBrickVidrieria",
   "Mode": "Default",
@@ -1105,6 +1105,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\Imagenes\\producto\\fe89eb06-8a25-40d4-91d8-9ed819cbfa32.jpg",
+      "SourceId": "ClickBrickVidrieria",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\",
+      "BasePath": "_content/ClickBrickVidrieria",
+      "RelativePath": "Imagenes/producto/fe89eb06-8a25-40d4-91d8-9ed819cbfa32.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagenes\\producto\\fe89eb06-8a25-40d4-91d8-9ed819cbfa32.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\js\\Bodega.js",
       "SourceId": "ClickBrickVidrieria",
       "SourceType": "Discovered",
@@ -1154,6 +1171,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Marca.js"
+    },
+    {
+      "Identity": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\js\\Producto.js",
+      "SourceId": "ClickBrickVidrieria",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\",
+      "BasePath": "_content/ClickBrickVidrieria",
+      "RelativePath": "js/Producto.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Producto.js"
     },
     {
       "Identity": "C:\\Users\\Alejandro Bautista\\source\\repos\\ClickBrickVidrieria\\ClickBrickVidrieria\\wwwroot\\js\\site.js",

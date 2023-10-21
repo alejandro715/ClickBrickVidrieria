@@ -15,6 +15,7 @@ namespace ClickBrickVidrieria.AccesoDatos.Repositorio
         public iBodegaRepositorio Bodega { get; private set; }
         public iCategoriaRepositorio Categoria { get; private set; }
         public iMarcaRepositorio Marca { get; private set; }
+        public iProductoRepositorio Producto { get; private set; }
 
         public UnidadTrabajo(ApplicationDbContext db)
         {
@@ -22,6 +23,8 @@ namespace ClickBrickVidrieria.AccesoDatos.Repositorio
             Bodega = new BodegaRepositorio(_db);
             Categoria = new CategoriaRepositorio(_db);
             Marca = new MarcaRepositorio(_db);
+            Producto = new ProductoRepositorio(_db);
+
         }
 
         public void Dispose()
