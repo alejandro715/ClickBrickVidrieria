@@ -13,5 +13,12 @@ namespace ClickBrickVidrieria.Utilidades
         public const string Error = "Error";
 
         public const string ImagenRuta = @"\Imagenes\producto\";
+
+        public const String Role_Admin = "Admin";
+
+        public const String Role_Cliente = "Cliente";
+
+        public const String Role_Inventario = "Inventario";
+
     }
 }

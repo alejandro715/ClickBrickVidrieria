@@ -3396,6 +3396,9 @@
         }
       },
       "ClickBrickVidrieria.Utilidades/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "6.0.23"
+        },
         "runtime": {
           "ClickBrickVidrieria.Utilidades.dll": {}
         },
