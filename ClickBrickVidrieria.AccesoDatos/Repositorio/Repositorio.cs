@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Linq.Expressions;
 using ClickBrickVidrieria.AccesoDatos.Data;
 using Microsoft.EntityFrameworkCore;
+using ClickBrickVidrieria.Modelos.Especificaciones;
 
 namespace ClickBrickVidrieria.AccesoDatos.Repositorio
 {
@@ -66,6 +67,38 @@ namespace ClickBrickVidrieria.AccesoDatos.Repositorio
             return await query.ToListAsync();
         }
 
+        public PagedList<T> ObtenerTodosPaginado(Parametros parametros, Expression<Func<T, bool>> filtro = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string incluirPropiedades = null, bool isTracking = true)
+        {
+            IQueryable<T> query = dbset;
+
+            if (filtro != null)
+            {
+
+                query = query.Where(filtro);
+
+            }
+            if (incluirPropiedades != null)
+            {
+
+                foreach (var incluirProp in incluirPropiedades.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(incluirProp); //emeplo categoria.marca
+                }
+
+            }
+            if (orderBy != null)
+            {
+                query = orderBy(query);
+
+            }
+            if (!isTracking)
+            {
+
+                query = query.AsNoTracking();
+            }
+            return PagedList<T>.ToPagedList(query, parametros.PageNumber, parametros.PageSize);
+        }
+
         public async Task<T> ObtenerPrimero(Expression<Func<T, bool>> filtro = null, string incluirPropiedades = null, bool isTracking = true)
         {
 
@@ -106,5 +139,6 @@ namespace ClickBrickVidrieria.AccesoDatos.Repositorio
         {
             dbset.RemoveRange(entidad);
         }
+
     }
 }
