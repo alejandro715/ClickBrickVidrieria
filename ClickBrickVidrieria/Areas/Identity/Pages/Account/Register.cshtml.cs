@@ -182,7 +182,14 @@ namespace ClickBrickVidrieria.Areas.Identity.Pages.Account
                         await _roleManager.CreateAsync(new IdentityRole(DS.Role_Inventario));
                     }
 
-                    await _userManager.AddToRoleAsync(user, DS.Role_Admin);
+                    if(user.Role == null) /// si va nulo es cliente
+                    {
+                        await _userManager.AddToRoleAsync(user, DS.Role_Cliente);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, user.Role);
+                    }
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -202,8 +209,16 @@ namespace ClickBrickVidrieria.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+                        if(user.Role == null)
+                        {
+                            await _signInManager.SignInAsync(user, isPersistent: false);
+                            return LocalRedirect(returnUrl);
+                        }
+                        else
+                        {
+                            return RedirectToAction("Index", "Usuario", new { Area = "Admin" });
+
+                        }
                     }
                 }
                 foreach (var error in result.Errors)
