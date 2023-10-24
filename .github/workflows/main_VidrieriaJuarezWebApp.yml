@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://mcr.microsoft.com/
-        username: ${{ secrets.AzureAppService_ContainerUsername_a2b497321bf84b62be2bd811ac9c85fe }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_9a98993d797a4158ba52087181e1e89b }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_8cb8ed2e4f984f93b851438313580279 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_d3f7c3ba8f534199a39d513c49cd7d8b }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_a2b497321bf84b62be2bd811ac9c85fe }}/appsvc/staticsite:${{ github.sha }}
+        tags: mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_8cb8ed2e4f984f93b851438313580279 }}/appsvc/staticsite:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'VidrieriaJuarezWebApp'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_671970dd03eb4a62af02502649e510f3 }}
-        images: 'mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_a2b497321bf84b62be2bd811ac9c85fe }}/appsvc/staticsite:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_f0ecabbaa1ce427d9f32a24197293bf2 }}
+        images: 'mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_8cb8ed2e4f984f93b851438313580279 }}/appsvc/staticsite:${{ github.sha }}'
