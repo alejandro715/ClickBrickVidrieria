@@ -20,6 +20,9 @@ namespace ClickBrickVidrieria.AccesoDatos.Data
         public DbSet<Producto> Productos { get; set; }
 
         public DbSet<UsuarioAplicacion> UsuarioAplicacion { get; set; }
+
+        public DbSet<BodegaProducto> BodegasProductos  { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
