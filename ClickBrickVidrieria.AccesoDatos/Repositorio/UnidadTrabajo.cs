@@ -20,6 +20,12 @@ namespace ClickBrickVidrieria.AccesoDatos.Repositorio
 
         public iProductoBodegaRepositorio ProductoBodega { get; private set; }
 
+        public iInventarioRepositorio Inventario { get; private set; }
+
+        public iInventarioDetalleRepositorio InventarioDetalle { get; private set; }
+
+        public iKardexInventarioRepositorio KardexInventario { get; private set; }
+
         public UnidadTrabajo(ApplicationDbContext db)
         {
             _db = db;
@@ -29,6 +35,9 @@ namespace ClickBrickVidrieria.AccesoDatos.Repositorio
             Producto = new ProductoRepositorio(_db);
             UsuarioAplicacion = new UsuarioAplicacionRepositorio(_db);
             ProductoBodega = new ProductoBodegaRepositorio(_db);
+            Inventario = new InventarioRepositorio(_db);
+            InventarioDetalle = new InventarioDetalleRepositorio(_db);
+            KardexInventario = new KardexInventarioRepositorio(_db);
 
         }
 

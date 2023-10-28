@@ -185,6 +185,7 @@ namespace ClickBrickVidrieria.Areas.Identity.Pages.Account
                     if(user.Role == null) /// si va nulo es cliente
                     {
                         await _userManager.AddToRoleAsync(user, DS.Role_Cliente);
+                        //await _userManager.AddToRoleAsync(user, DS.Role_Admin);
                     }
                     else
                     {

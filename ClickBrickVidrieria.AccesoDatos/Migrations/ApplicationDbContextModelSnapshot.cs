@@ -100,6 +100,119 @@ namespace ClickBrickVidrieria.AccesoDatos.Migrations
                     b.ToTable("Categorias");
                 });
 
+            modelBuilder.Entity("ClickBrickVidrieria.Modelos.Inventario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("BodegaId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Estado")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("FechaFinal")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaInicial")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UsuarioAplicacionId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BodegaId");
+
+                    b.HasIndex("UsuarioAplicacionId");
+
+                    b.ToTable("Inventarios");
+                });
+
+            modelBuilder.Entity("ClickBrickVidrieria.Modelos.InventarioDetalle", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
+                    b.Property<int>("InventarioId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StockAnterior")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("InventarioId");
+
+                    b.HasIndex("ProductoId");
+
+                    b.ToTable("InventarioDetalles");
+                });
+
+            modelBuilder.Entity("ClickBrickVidrieria.Modelos.KardexInventario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("BodegaProductoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Costo")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Detalle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaRegistro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Stock")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StockAnterior")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<double>("Total")
+                        .HasColumnType("float");
+
+                    b.Property<string>("UsuarioAplicacionId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BodegaProductoId");
+
+                    b.HasIndex("UsuarioAplicacionId");
+
+                    b.ToTable("kardexInventarios");
+                });
+
             modelBuilder.Entity("ClickBrickVidrieria.Modelos.Marca", b =>
                 {
                     b.Property<int>("Id")
@@ -429,6 +542,63 @@ namespace ClickBrickVidrieria.AccesoDatos.Migrations
                     b.Navigation("Bodega");
 
                     b.Navigation("Producto");
+                });
+
+            modelBuilder.Entity("ClickBrickVidrieria.Modelos.Inventario", b =>
+                {
+                    b.HasOne("ClickBrickVidrieria.Modelos.Bodega", "Bodega")
+                        .WithMany()
+                        .HasForeignKey("BodegaId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("ClickBrickVidrieria.Modelos.UsuarioAplicacion", "UsuarioAplicacion")
+                        .WithMany()
+                        .HasForeignKey("UsuarioAplicacionId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Bodega");
+
+                    b.Navigation("UsuarioAplicacion");
+                });
+
+            modelBuilder.Entity("ClickBrickVidrieria.Modelos.InventarioDetalle", b =>
+                {
+                    b.HasOne("ClickBrickVidrieria.Modelos.Inventario", "Inventario")
+                        .WithMany()
+                        .HasForeignKey("InventarioId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("ClickBrickVidrieria.Modelos.Producto", "Producto")
+                        .WithMany()
+                        .HasForeignKey("ProductoId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Inventario");
+
+                    b.Navigation("Producto");
+                });
+
+            modelBuilder.Entity("ClickBrickVidrieria.Modelos.KardexInventario", b =>
+                {
+                    b.HasOne("ClickBrickVidrieria.Modelos.BodegaProducto", "BodegaProducto")
+                        .WithMany()
+                        .HasForeignKey("BodegaProductoId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("ClickBrickVidrieria.Modelos.UsuarioAplicacion", "UsuarioAplicacion")
+                        .WithMany()
+                        .HasForeignKey("UsuarioAplicacionId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("BodegaProducto");
+
+                    b.Navigation("UsuarioAplicacion");
                 });
 
             modelBuilder.Entity("ClickBrickVidrieria.Modelos.Producto", b =>

@@ -17,6 +17,11 @@ namespace ClickBrickVidrieria.AccesoDatos.Repositorio.iRepositorio
 
         iProductoBodegaRepositorio ProductoBodega { get; }
 
+        iInventarioRepositorio Inventario { get; }
+
+        iInventarioDetalleRepositorio InventarioDetalle { get; }
+
+        iKardexInventarioRepositorio KardexInventario { get; }
         Task Guardar();
 
     }
