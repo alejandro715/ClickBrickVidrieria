@@ -1,11 +1,14 @@
 ﻿using ClickBrickVidrieria.AccesoDatos.Data;
 using ClickBrickVidrieria.AccesoDatos.Repositorio.iRepositorio;
+using ClickBrickVidrieria.Utilidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace ClickBrickVidrieria.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = DS.Role_Admin)]
     public class UsuarioController : Controller
     {
 

@@ -1,11 +1,13 @@
 ﻿using ClickBrickVidrieria.AccesoDatos.Repositorio.iRepositorio;
 using ClickBrickVidrieria.Modelos;
 using ClickBrickVidrieria.Utilidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClickBrickVidrieria.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles =DS.Role_Admin)]
 
     public class BodegaController : Controller
     {

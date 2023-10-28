@@ -2,12 +2,13 @@
 using ClickBrickVidrieria.Modelos;
 using ClickBrickVidrieria.Modelos.ViewModels;
 using ClickBrickVidrieria.Utilidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClickBrickVidrieria.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
+    [Authorize(Roles = DS.Role_Admin + "," + DS.Role_Inventario)]
     public class ProductoController : Controller
     {
 
